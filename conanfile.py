@@ -42,3 +42,7 @@ class PerlinstallerConan(ConanFile):
     def package(self):
         """We currently install globally so have nothing to package"""
         pass
+
+    def package_info(self):
+        # FIXME: Let path be an option
+        self.env_info.path.append(r'C:\Strawberry\perl\bin')
